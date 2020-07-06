@@ -25,5 +25,37 @@ function custom_setup() {
 			'footer' => __( 'Footer Menu', 'custom' ),
 			'social' => __( 'Social Links Menu', 'custom' ),
 		)
+    );
+    
+    /*
+	* Switch default core markup for search form, comment form, and comments
+	* to output valid HTML5.
+	*/
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			'script',
+			'style',
+		)
+    );
+    /**
+	* Add support for core custom logo.
+	 *
+	 * @link https://codex.wordpress.org/Theme_Logo
+	 */
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 190,
+			'width'       => 190,
+			'flex-width'  => false,
+			'flex-height' => false,
+		)
 	);
+
 }
