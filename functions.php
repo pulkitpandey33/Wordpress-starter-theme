@@ -56,6 +56,10 @@ function custom_setup() {
 			'flex-width'  => false,
 			'flex-height' => false,
 		)
-	);
+    );
+    
+    // Add support for responsive embedded content.
+	add_theme_support( 'responsive-embeds' );
 
 }
+add_action( 'after_setup_theme', 'custom_setup' );
