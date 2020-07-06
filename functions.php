@@ -62,4 +62,5 @@ function custom_setup() {
 	add_theme_support( 'responsive-embeds' );
 
 }
+endif;
 add_action( 'after_setup_theme', 'custom_setup' );
