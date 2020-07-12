@@ -83,6 +83,10 @@ function custom_widgets_init() {
 add_action( 'widgets_init', 'custom_widgets_init' );
 
 function custom_script() {
+	// wp_register_script( 'jquery','https://code.jquery.com/jquery-3.5.1.min.js', null, null, true);
+	// wp_enqueue_script('jquery');
 	wp_enqueue_style( 'custom-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_script( 'myscript', get_template_directory_uri() . '/js/script.js', array(), false, true);
+	
 }
 add_action( 'wp_enqueue_scripts', 'custom_script' );
