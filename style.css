@@ -1,0 +1,151 @@
+/* global variables in the :root class */
+:root {
+  --header-background-color: #ffbb00;
+  --footer-background-color: #000000;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 5%;
+}
+
+/* Header CSS */
+.header-wrapper {
+  background-color: var(--header-background-color);
+}
+
+.site-title {
+  margin: 0;
+}
+
+.header {
+  margin: 0 auto;
+  padding: 0 5%;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 88px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-menu li a {
+  border: 0;
+  color: #001a33;
+  font-size: 16px;
+  padding: 0;
+  width: auto;
+  font-weight: 100;
+  vertical-align: middle;
+  margin-left: 48px;
+  display: none;
+}
+
+.main-menu {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-search {
+  margin-left: 30px;
+}
+
+/* Hamburger menu  */
+.menu-icon .line {
+  width: 35px;
+  height: 5px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+#mobile-icon.is-active .line:nth-child(1) {
+  width: 30px;
+}
+
+#mobile-icon.is-active .line:nth-child(2) {
+  width: 40px;
+}
+
+#mobile-icon.is-active .line {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+#user-nav {
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#user-nav[aria-expanded="true"] {
+  right: 0;
+  left: 0;
+  top: 81px;
+  z-index: 1;
+}
+
+#user-nav[aria-expanded="true"] .main-menu li a {
+  color: #52a9ff;
+  display: block;
+  margin: 20px 5%;
+}
+
+@media (min-width: 1024px) {
+  .main-menu li a {
+    display: inline-block;
+  }
+  .main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mobile-menu-icon {
+    display: none;
+  }
+  .nav-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 320px;
+            flex: 1 0 320px;
+  }
+  .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 420px;
+            flex: 0 0 420px;
+  }
+  #user-nav {
+    position: relative;
+  }
+}
+
+/* Header CSS End */
+/*# sourceMappingURL=style.css.map */
